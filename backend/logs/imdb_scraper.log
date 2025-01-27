@@ -1,0 +1,469 @@
+2025-01-26 09:49:49,714 - movies.logging_config - ERROR - Scraping failed for genre comedy: can only concatenate str (not "int") to str
+2025-01-26 09:49:49,721 - django.request - WARNING - Bad Request: /api/movies/scrape/
+2025-01-26 09:49:49,739 - django.request - WARNING - Not Found: /api/movies/
+2025-01-26 09:50:52,712 - django.utils.autoreload - INFO - /Users/mitchellzelthy/Desktop/Learn/Scraper/backend/movies/urls.py changed, reloading.
+2025-01-26 09:53:38,354 - movies.logging_config - ERROR - Scraping failed for genre comedy: can only concatenate str (not "int") to str
+2025-01-26 09:53:38,359 - django.request - WARNING - Bad Request: /api/movies/scrape/
+2025-01-26 09:53:38,405 - django.request - ERROR - Internal Server Error: /api/movies/
+Traceback (most recent call last):
+  File "/Users/mitchellzelthy/Desktop/Learn/Scraper/scraper/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/mitchellzelthy/Desktop/Learn/Scraper/scraper/lib/python3.13/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/mitchellzelthy/Desktop/Learn/Scraper/backend/movies/views.py", line 29, in movie_list_view
+    return render(request, 'movies/movie_list.html', {'movies': movies})
+  File "/Users/mitchellzelthy/Desktop/Learn/Scraper/scraper/lib/python3.13/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/Users/mitchellzelthy/Desktop/Learn/Scraper/scraper/lib/python3.13/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/Users/mitchellzelthy/Desktop/Learn/Scraper/scraper/lib/python3.13/site-packages/django/template/loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: movies/movie_list.html
+2025-01-26 09:54:38,578 - movies.logging_config - ERROR - Scraping failed for genre comedy: can only concatenate str (not "int") to str
+2025-01-26 09:54:38,582 - django.request - WARNING - Bad Request: /api/movies/scrape/
+2025-01-26 09:57:42,150 - django.utils.autoreload - INFO - /Users/mitchellzelthy/Desktop/Learn/Scraper/backend/movies/views.py changed, reloading.
+2025-01-26 09:57:48,945 - django.utils.autoreload - INFO - /Users/mitchellzelthy/Desktop/Learn/Scraper/backend/movies/views.py changed, reloading.
+2025-01-26 09:58:01,684 - django.utils.autoreload - INFO - /Users/mitchellzelthy/Desktop/Learn/Scraper/backend/movies/imdb_scraper.py changed, reloading.
+2025-01-26 09:58:21,611 - django.utils.autoreload - INFO - /Users/mitchellzelthy/Desktop/Learn/Scraper/backend/movies/models.py changed, reloading.
+2025-01-26 09:59:44,345 - movies.logging_config - ERROR - Scraping failed for genre comedy: '<' not supported between instances of 'int' and 'str'
+2025-01-26 09:59:44,349 - django.request - WARNING - Bad Request: /api/movies/scrape/
+2025-01-26 10:05:51,930 - django.utils.autoreload - INFO - /Users/mitchellzelthy/Desktop/Learn/Scraper/backend/movies/imdb_scraper.py changed, reloading.
+2025-01-26 10:10:13,111 - django.utils.autoreload - INFO - /Users/mitchellzelthy/Desktop/Learn/Scraper/backend/movies/admin.py changed, reloading.
+2025-01-26 10:10:16,839 - django.utils.autoreload - INFO - /Users/mitchellzelthy/Desktop/Learn/Scraper/backend/movies/admin.py changed, reloading.
+2025-01-26 10:10:30,405 - django.utils.autoreload - INFO - /Users/mitchellzelthy/Desktop/Learn/Scraper/backend/movies/admin.py changed, reloading.
+2025-01-26 10:10:54,358 - django.utils.autoreload - INFO - /Users/mitchellzelthy/Desktop/Learn/Scraper/backend/movies/admin.py changed, reloading.
+2025-01-26 10:11:13,343 - django.utils.autoreload - INFO - /Users/mitchellzelthy/Desktop/Learn/Scraper/backend/movies/admin.py changed, reloading.
+2025-01-26 10:11:23,762 - movies.logging_config - ERROR - Scraping failed for genre action: '<' not supported between instances of 'int' and 'str'
+2025-01-26 10:11:23,768 - django.request - WARNING - Bad Request: /api/movies/scrape/
+2025-01-26 10:13:22,115 - django.utils.autoreload - INFO - /Users/mitchellzelthy/Desktop/Learn/Scraper/backend/movies/imdb_scraper.py changed, reloading.
+2025-01-26 10:13:27,122 - movies.logging_config - ERROR - Scraping failed for genre action: '<' not supported between instances of 'int' and 'str'
+2025-01-26 10:13:27,126 - django.request - WARNING - Bad Request: /api/movies/scrape/
+2025-01-26 10:16:39,166 - movies.logging_config - ERROR - Scraping failed for genre horror: '<' not supported between instances of 'int' and 'str'
+2025-01-26 10:16:39,169 - django.request - WARNING - Bad Request: /api/movies/scrape/
+2025-01-26 10:17:50,634 - django.utils.autoreload - INFO - /Users/mitchellzelthy/Desktop/Learn/Scraper/backend/movies/imdb_scraper.py changed, reloading.
+2025-01-26 10:17:54,904 - movies.logging_config - ERROR - Scraping failed for genre horror: '<' not supported between instances of 'int' and 'str'
+2025-01-26 10:17:54,905 - movies.logging_config - ERROR - Traceback (most recent call last):
+  File "/Users/mitchellzelthy/Desktop/Learn/Scraper/backend/movies/imdb_scraper.py", line 32, in scrape_movies_by_genre
+    while page_count < max_pages:
+          ^^^^^^^^^^^^^^^^^^^^^^
+TypeError: '<' not supported between instances of 'int' and 'str'
+
+2025-01-26 10:17:54,919 - django.request - WARNING - Bad Request: /api/movies/scrape/
+2025-01-26 10:18:43,525 - django.utils.autoreload - INFO - /Users/mitchellzelthy/Desktop/Learn/Scraper/backend/movies/imdb_scraper.py changed, reloading.
+2025-01-26 10:19:08,609 - django.utils.autoreload - INFO - /Users/mitchellzelthy/Desktop/Learn/Scraper/backend/movies/imdb_scraper.py changed, reloading.
+2025-01-26 10:19:10,475 - movies.logging_config - INFO - Processing page: https://www.imdb.com/search/title/?genres=horror&start=1&explore=title_type,genres
+2025-01-26 10:19:13,967 - movies.logging_config - ERROR - Scraping failed for genre horror: Invalid field name(s) for model Movie: 'poster_url'.
+2025-01-26 10:19:13,970 - movies.logging_config - ERROR - Traceback (most recent call last):
+  File "/Users/mitchellzelthy/Desktop/Learn/Scraper/scraper/lib/python3.13/site-packages/django/db/models/query.py", line 916, in get_or_create
+    return self.get(**kwargs), False
+           ~~~~~~~~^^^^^^^^^^
+  File "/Users/mitchellzelthy/Desktop/Learn/Scraper/scraper/lib/python3.13/site-packages/django/db/models/query.py", line 637, in get
+    raise self.model.DoesNotExist(
+        "%s matching query does not exist." % self.model._meta.object_name
+    )
+movies.models.Movie.DoesNotExist: Movie matching query does not exist.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/mitchellzelthy/Desktop/Learn/Scraper/backend/movies/imdb_scraper.py", line 64, in scrape_movies_by_genre
+    movie_obj, created = Movie.objects.get_or_create(
+                         ~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        title=title,
+        ^^^^^^^^^^^^
+    ...<7 lines>...
+        }
+        ^
+    )
+    ^
+  File "/Users/mitchellzelthy/Desktop/Learn/Scraper/scraper/lib/python3.13/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/Users/mitchellzelthy/Desktop/Learn/Scraper/scraper/lib/python3.13/site-packages/django/db/models/query.py", line 918, in get_or_create
+    params = self._extract_model_params(defaults, **kwargs)
+  File "/Users/mitchellzelthy/Desktop/Learn/Scraper/scraper/lib/python3.13/site-packages/django/db/models/query.py", line 999, in _extract_model_params
+    raise exceptions.FieldError(
+    ...<5 lines>...
+    )
+django.core.exceptions.FieldError: Invalid field name(s) for model Movie: 'poster_url'.
+
+2025-01-26 10:19:13,978 - django.request - WARNING - Bad Request: /api/movies/scrape/
+2025-01-26 10:20:03,522 - django.utils.autoreload - INFO - /Users/mitchellzelthy/Desktop/Learn/Scraper/backend/movies/models.py changed, reloading.
+2025-01-26 10:20:18,243 - movies.logging_config - INFO - Processing page: https://www.imdb.com/search/title/?genres=action&start=1&explore=title_type,genres
+2025-01-26 10:20:21,326 - movies.logging_config - ERROR - Scraping failed for genre action: NOT NULL constraint failed: movies_movie.directors
+2025-01-26 10:20:21,334 - movies.logging_config - ERROR - Traceback (most recent call last):
+  File "/Users/mitchellzelthy/Desktop/Learn/Scraper/scraper/lib/python3.13/site-packages/django/db/models/query.py", line 916, in get_or_create
+    return self.get(**kwargs), False
+           ~~~~~~~~^^^^^^^^^^
+  File "/Users/mitchellzelthy/Desktop/Learn/Scraper/scraper/lib/python3.13/site-packages/django/db/models/query.py", line 637, in get
+    raise self.model.DoesNotExist(
+        "%s matching query does not exist." % self.model._meta.object_name
+    )
+movies.models.Movie.DoesNotExist: Movie matching query does not exist.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/mitchellzelthy/Desktop/Learn/Scraper/scraper/lib/python3.13/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/Users/mitchellzelthy/Desktop/Learn/Scraper/scraper/lib/python3.13/site-packages/django/db/backends/sqlite3/base.py", line 328, in execute
+    return super().execute(query, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+sqlite3.IntegrityError: NOT NULL constraint failed: movies_movie.directors
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/mitchellzelthy/Desktop/Learn/Scraper/backend/movies/imdb_scraper.py", line 64, in scrape_movies_by_genre
+    movie_obj, created = Movie.objects.get_or_create(
+                         ~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        title=title,
+        ^^^^^^^^^^^^
+    ...<7 lines>...
+        }
+        ^
+    )
+    ^
+  File "/Users/mitchellzelthy/Desktop/Learn/Scraper/scraper/lib/python3.13/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/Users/mitchellzelthy/Desktop/Learn/Scraper/scraper/lib/python3.13/site-packages/django/db/models/query.py", line 923, in get_or_create
+    return self.create(**params), True
+           ~~~~~~~~~~~^^^^^^^^^^
+  File "/Users/mitchellzelthy/Desktop/Learn/Scraper/scraper/lib/python3.13/site-packages/django/db/models/query.py", line 658, in create
+    obj.save(force_insert=True, using=self.db)
+    ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mitchellzelthy/Desktop/Learn/Scraper/scraper/lib/python3.13/site-packages/django/db/models/base.py", line 814, in save
+    self.save_base(
+    ~~~~~~~~~~~~~~^
+        using=using,
+        ^^^^^^^^^^^^
+    ...<2 lines>...
+        update_fields=update_fields,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/mitchellzelthy/Desktop/Learn/Scraper/scraper/lib/python3.13/site-packages/django/db/models/base.py", line 877, in save_base
+    updated = self._save_table(
+        raw,
+    ...<4 lines>...
+        update_fields,
+    )
+  File "/Users/mitchellzelthy/Desktop/Learn/Scraper/scraper/lib/python3.13/site-packages/django/db/models/base.py", line 1020, in _save_table
+    results = self._do_insert(
+        cls._base_manager, using, fields, returning_fields, raw
+    )
+  File "/Users/mitchellzelthy/Desktop/Learn/Scraper/scraper/lib/python3.13/site-packages/django/db/models/base.py", line 1061, in _do_insert
+    return manager._insert(
+           ~~~~~~~~~~~~~~~^
+        [self],
+        ^^^^^^^
+    ...<3 lines>...
+        raw=raw,
+        ^^^^^^^^
+    )
+    ^
+  File "/Users/mitchellzelthy/Desktop/Learn/Scraper/scraper/lib/python3.13/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/Users/mitchellzelthy/Desktop/Learn/Scraper/scraper/lib/python3.13/site-packages/django/db/models/query.py", line 1805, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "/Users/mitchellzelthy/Desktop/Learn/Scraper/scraper/lib/python3.13/site-packages/django/db/models/sql/compiler.py", line 1822, in execute_sql
+    cursor.execute(sql, params)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/Users/mitchellzelthy/Desktop/Learn/Scraper/scraper/lib/python3.13/site-packages/django/db/backends/utils.py", line 102, in execute
+    return super().execute(sql, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/Users/mitchellzelthy/Desktop/Learn/Scraper/scraper/lib/python3.13/site-packages/django/db/backends/utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        sql, params, many=False, executor=self._execute
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/mitchellzelthy/Desktop/Learn/Scraper/scraper/lib/python3.13/site-packages/django/db/backends/utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/Users/mitchellzelthy/Desktop/Learn/Scraper/scraper/lib/python3.13/site-packages/django/db/backends/utils.py", line 84, in _execute
+    with self.db.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mitchellzelthy/Desktop/Learn/Scraper/scraper/lib/python3.13/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/Users/mitchellzelthy/Desktop/Learn/Scraper/scraper/lib/python3.13/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/Users/mitchellzelthy/Desktop/Learn/Scraper/scraper/lib/python3.13/site-packages/django/db/backends/sqlite3/base.py", line 328, in execute
+    return super().execute(query, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+django.db.utils.IntegrityError: NOT NULL constraint failed: movies_movie.directors
+
+2025-01-26 10:20:21,342 - django.request - WARNING - Bad Request: /api/movies/scrape/
+2025-01-26 10:21:03,612 - django.utils.autoreload - INFO - /Users/mitchellzelthy/Desktop/Learn/Scraper/backend/movies/models.py changed, reloading.
+2025-01-26 10:21:10,329 - movies.logging_config - INFO - Processing page: https://www.imdb.com/search/title/?genres=action&start=1&explore=title_type,genres
+2025-01-26 10:21:12,426 - movies.logging_config - INFO - Processing page: https://www.imdb.com/search/title/?genres=action&start=51&explore=title_type,genres
+2025-01-26 10:21:14,058 - movies.logging_config - INFO - Processing page: https://www.imdb.com/search/title/?genres=action&start=101&explore=title_type,genres
+2025-01-26 10:23:58,851 - django.utils.autoreload - INFO - /Users/mitchellzelthy/Desktop/Learn/Scraper/backend/movies/imdb_scraper.py changed, reloading.
+2025-01-26 10:24:08,142 - movies.logging_config - INFO - Processing page: https://www.imdb.com/search/title/?genres=comedy&start=1&explore=title_type,genres
+2025-01-26 10:24:12,425 - movies.logging_config - INFO - Processing page: https://www.imdb.com/search/title/?genres=comedy&start=51&explore=title_type,genres
+2025-01-26 10:24:14,097 - movies.logging_config - INFO - Processing page: https://www.imdb.com/search/title/?genres=comedy&start=101&explore=title_type,genres
+2025-01-26 10:24:42,546 - django.utils.autoreload - INFO - /Users/mitchellzelthy/Desktop/Learn/Scraper/backend/movies/imdb_scraper.py changed, reloading.
+2025-01-26 10:24:51,032 - movies.logging_config - INFO - Processing page: https://www.imdb.com/search/title/?genres=action&start=1&explore=title_type,genres
+2025-01-26 10:24:52,265 - movies.logging_config - INFO - Processing page: https://www.imdb.com/search/title/?genres=action&start=51&explore=title_type,genres
+2025-01-26 10:24:53,844 - movies.logging_config - INFO - Processing page: https://www.imdb.com/search/title/?genres=action&start=101&explore=title_type,genres
+2025-01-26 10:52:21,742 - django.utils.autoreload - INFO - /Users/mitchellzelthy/Desktop/Learn/Scraper/backend/movies/views.py changed, reloading.
+2025-01-26 10:52:47,962 - django.utils.autoreload - INFO - /Users/mitchellzelthy/Desktop/Learn/Scraper/backend/movies/views.py changed, reloading.
+2025-01-26 10:53:30,530 - movies.logging_config - INFO - Processing page: https://www.imdb.com/search/title/?genres=drama&start=1&explore=title_type,genres
+2025-01-26 10:53:34,713 - movies.logging_config - INFO - Processing page: https://www.imdb.com/search/title/?genres=drama&start=51&explore=title_type,genres
+2025-01-26 10:53:36,281 - movies.logging_config - INFO - Processing page: https://www.imdb.com/search/title/?genres=drama&start=101&explore=title_type,genres
+2025-01-26 10:53:37,913 - django.request - ERROR - Internal Server Error: /api/movies/
+Traceback (most recent call last):
+  File "/Users/mitchellzelthy/Desktop/Learn/Scraper/scraper/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/mitchellzelthy/Desktop/Learn/Scraper/scraper/lib/python3.13/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/mitchellzelthy/Desktop/Learn/Scraper/backend/movies/views.py", line 28, in movie_list_view
+    genre = request.data.get('genre', 'comedy')
+            ^^^^^^^^^^^^
+AttributeError: 'WSGIRequest' object has no attribute 'data'
+2025-01-26 10:54:14,330 - movies.logging_config - INFO - Processing page: https://www.imdb.com/search/title/?genres=drama&start=1&explore=title_type,genres
+2025-01-26 10:54:15,924 - movies.logging_config - INFO - Processing page: https://www.imdb.com/search/title/?genres=drama&start=51&explore=title_type,genres
+2025-01-26 10:54:17,116 - movies.logging_config - INFO - Processing page: https://www.imdb.com/search/title/?genres=drama&start=101&explore=title_type,genres
+2025-01-26 10:54:19,428 - django.request - ERROR - Internal Server Error: /api/movies/
+Traceback (most recent call last):
+  File "/Users/mitchellzelthy/Desktop/Learn/Scraper/scraper/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/mitchellzelthy/Desktop/Learn/Scraper/scraper/lib/python3.13/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/mitchellzelthy/Desktop/Learn/Scraper/backend/movies/views.py", line 28, in movie_list_view
+    genre = request.data.get('genre', 'comedy')
+            ^^^^^^^^^^^^
+AttributeError: 'WSGIRequest' object has no attribute 'data'
+2025-01-26 10:55:55,640 - django.utils.autoreload - INFO - /Users/mitchellzelthy/Desktop/Learn/Scraper/backend/movies/views.py changed, reloading.
+2025-01-26 10:55:57,209 - django.utils.autoreload - INFO - /Users/mitchellzelthy/Desktop/Learn/Scraper/backend/movies/views.py changed, reloading.
+2025-01-26 10:55:59,571 - django.utils.autoreload - INFO - /Users/mitchellzelthy/Desktop/Learn/Scraper/backend/movies/views.py changed, reloading.
+2025-01-26 10:56:00,943 - django.utils.autoreload - INFO - /Users/mitchellzelthy/Desktop/Learn/Scraper/backend/movies/views.py changed, reloading.
+2025-01-26 10:56:02,280 - movies.logging_config - INFO - Processing page: https://www.imdb.com/search/title/?genres=drama&start=1&explore=title_type,genres
+2025-01-26 10:56:04,185 - movies.logging_config - INFO - Processing page: https://www.imdb.com/search/title/?genres=drama&start=51&explore=title_type,genres
+2025-01-26 10:56:05,671 - movies.logging_config - INFO - Processing page: https://www.imdb.com/search/title/?genres=drama&start=101&explore=title_type,genres
+2025-01-26 10:56:06,686 - django.request - ERROR - Internal Server Error: /api/movies/
+Traceback (most recent call last):
+  File "/Users/mitchellzelthy/Desktop/Learn/Scraper/scraper/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/mitchellzelthy/Desktop/Learn/Scraper/scraper/lib/python3.13/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/mitchellzelthy/Desktop/Learn/Scraper/backend/movies/views.py", line 28, in movie_list_view
+    genre = request.data.get('genre', 'comedy')
+            ^^^^^^^^^^^^
+AttributeError: 'WSGIRequest' object has no attribute 'data'
+2025-01-26 10:57:02,072 - django.utils.autoreload - INFO - /Users/mitchellzelthy/Desktop/Learn/Scraper/backend/movies/views.py changed, reloading.
+2025-01-26 10:57:24,537 - django.utils.autoreload - INFO - /Users/mitchellzelthy/Desktop/Learn/Scraper/backend/movies/views.py changed, reloading.
+2025-01-26 10:57:32,647 - movies.logging_config - INFO - Processing page: https://www.imdb.com/search/title/?genres=action&start=1&explore=title_type,genres
+2025-01-26 10:57:35,133 - movies.logging_config - INFO - Processing page: https://www.imdb.com/search/title/?genres=action&start=51&explore=title_type,genres
+2025-01-26 10:57:36,148 - movies.logging_config - INFO - Processing page: https://www.imdb.com/search/title/?genres=action&start=101&explore=title_type,genres
+2025-01-26 10:57:37,845 - django.request - ERROR - Internal Server Error: /api/movies/
+Traceback (most recent call last):
+  File "/Users/mitchellzelthy/Desktop/Learn/Scraper/scraper/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/mitchellzelthy/Desktop/Learn/Scraper/scraper/lib/python3.13/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/mitchellzelthy/Desktop/Learn/Scraper/backend/movies/views.py", line 28, in movie_list_view
+    print("REQUEST", request.data)
+                     ^^^^^^^^^^^^
+AttributeError: 'WSGIRequest' object has no attribute 'data'
+2025-01-26 10:58:00,052 - django.utils.autoreload - INFO - /Users/mitchellzelthy/Desktop/Learn/Scraper/backend/movies/views.py changed, reloading.
+2025-01-26 10:58:02,956 - movies.logging_config - INFO - Processing page: https://www.imdb.com/search/title/?genres=action&start=1&explore=title_type,genres
+2025-01-26 10:58:04,792 - movies.logging_config - INFO - Processing page: https://www.imdb.com/search/title/?genres=action&start=51&explore=title_type,genres
+2025-01-26 10:58:07,364 - movies.logging_config - INFO - Processing page: https://www.imdb.com/search/title/?genres=action&start=101&explore=title_type,genres
+2025-01-26 10:58:09,090 - django.request - ERROR - Internal Server Error: /api/movies/
+Traceback (most recent call last):
+  File "/Users/mitchellzelthy/Desktop/Learn/Scraper/scraper/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/mitchellzelthy/Desktop/Learn/Scraper/scraper/lib/python3.13/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/mitchellzelthy/Desktop/Learn/Scraper/backend/movies/views.py", line 29, in movie_list_view
+    genre = request.data.get('genre', 'comedy')
+            ^^^^^^^^^^^^
+AttributeError: 'WSGIRequest' object has no attribute 'data'
+2025-01-26 10:58:48,017 - django.utils.autoreload - INFO - /Users/mitchellzelthy/Desktop/Learn/Scraper/backend/movies/views.py changed, reloading.
+2025-01-26 10:58:56,684 - movies.logging_config - INFO - Processing page: https://www.imdb.com/search/title/?genres=comedy&start=1&explore=title_type,genres
+2025-01-26 10:58:59,451 - movies.logging_config - INFO - Processing page: https://www.imdb.com/search/title/?genres=comedy&start=51&explore=title_type,genres
+2025-01-26 10:59:01,066 - movies.logging_config - INFO - Processing page: https://www.imdb.com/search/title/?genres=comedy&start=101&explore=title_type,genres
+2025-01-26 10:59:02,983 - django.request - ERROR - Internal Server Error: /api/movies/
+Traceback (most recent call last):
+  File "/Users/mitchellzelthy/Desktop/Learn/Scraper/scraper/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/mitchellzelthy/Desktop/Learn/Scraper/scraper/lib/python3.13/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/mitchellzelthy/Desktop/Learn/Scraper/backend/movies/views.py", line 29, in movie_list_view
+    genre = request.data.get('genre', 'comedy')
+            ^^^^^^^^^^^^
+AttributeError: 'WSGIRequest' object has no attribute 'data'
+2025-01-26 11:00:13,209 - movies.logging_config - INFO - Processing page: https://www.imdb.com/search/title/?genres=action&start=1&explore=title_type,genres
+2025-01-26 11:00:14,913 - movies.logging_config - INFO - Processing page: https://www.imdb.com/search/title/?genres=action&start=51&explore=title_type,genres
+2025-01-26 11:00:16,498 - movies.logging_config - INFO - Processing page: https://www.imdb.com/search/title/?genres=action&start=101&explore=title_type,genres
+2025-01-26 11:00:58,830 - movies.logging_config - INFO - Processing page: https://www.imdb.com/search/title/?genres=action&start=1&explore=title_type,genres
+2025-01-26 11:01:00,528 - movies.logging_config - INFO - Processing page: https://www.imdb.com/search/title/?genres=action&start=51&explore=title_type,genres
+2025-01-26 11:01:02,233 - movies.logging_config - INFO - Processing page: https://www.imdb.com/search/title/?genres=action&start=101&explore=title_type,genres
+2025-01-26 11:01:03,929 - django.request - ERROR - Internal Server Error: /api/movies/
+Traceback (most recent call last):
+  File "/Users/mitchellzelthy/Desktop/Learn/Scraper/scraper/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/mitchellzelthy/Desktop/Learn/Scraper/scraper/lib/python3.13/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/mitchellzelthy/Desktop/Learn/Scraper/backend/movies/views.py", line 29, in movie_list_view
+    genre = request.data.get('genre', 'comedy')
+            ^^^^^^^^^^^^
+AttributeError: 'WSGIRequest' object has no attribute 'data'
+2025-01-26 11:02:03,891 - django.utils.autoreload - INFO - /Users/mitchellzelthy/Desktop/Learn/Scraper/backend/movies/views.py changed, reloading.
+2025-01-26 11:02:11,967 - movies.logging_config - INFO - Processing page: https://www.imdb.com/search/title/?genres=drama&start=1&explore=title_type,genres
+2025-01-26 11:02:14,381 - movies.logging_config - INFO - Processing page: https://www.imdb.com/search/title/?genres=drama&start=51&explore=title_type,genres
+2025-01-26 11:02:15,669 - movies.logging_config - INFO - Processing page: https://www.imdb.com/search/title/?genres=drama&start=101&explore=title_type,genres
+2025-01-26 11:02:17,390 - django.request - ERROR - Internal Server Error: /api/movies/
+Traceback (most recent call last):
+  File "/Users/mitchellzelthy/Desktop/Learn/Scraper/scraper/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/mitchellzelthy/Desktop/Learn/Scraper/scraper/lib/python3.13/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/mitchellzelthy/Desktop/Learn/Scraper/backend/movies/views.py", line 29, in movie_list_view
+    genre = request.data.get('genre', 'comedy')
+            ^^^^^^^^^^^^
+AttributeError: 'WSGIRequest' object has no attribute 'data'
+2025-01-26 11:47:19,836 - movies.logging_config - INFO - Processing page: https://www.imdb.com/search/title/?genres=action&start=1&explore=title_type,genres
+2025-01-26 11:47:23,751 - movies.logging_config - INFO - Processing page: https://www.imdb.com/search/title/?genres=action&start=51&explore=title_type,genres
+2025-01-26 11:47:25,345 - movies.logging_config - INFO - Processing page: https://www.imdb.com/search/title/?genres=action&start=101&explore=title_type,genres
+2025-01-26 11:47:27,090 - django.request - ERROR - Internal Server Error: /api/movies/
+Traceback (most recent call last):
+  File "/Users/mitchellzelthy/Desktop/Learn/Scraper/scraper/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/mitchellzelthy/Desktop/Learn/Scraper/scraper/lib/python3.13/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/mitchellzelthy/Desktop/Learn/Scraper/backend/movies/views.py", line 29, in movie_list_view
+    genre = request.data.get('genre', 'comedy')
+            ^^^^^^^^^^^^
+AttributeError: 'WSGIRequest' object has no attribute 'data'
+2025-01-26 11:49:21,871 - django.utils.autoreload - INFO - /Users/mitchellzelthy/Desktop/Learn/Scraper/backend/movies/views.py changed, reloading.
+2025-01-26 11:49:42,943 - django.utils.autoreload - INFO - /Users/mitchellzelthy/Desktop/Learn/Scraper/backend/movies/views.py changed, reloading.
+2025-01-26 11:49:45,790 - movies.logging_config - INFO - Processing page: https://www.imdb.com/search/title/?genres=action&start=1&explore=title_type,genres
+2025-01-26 11:49:47,649 - movies.logging_config - INFO - Processing page: https://www.imdb.com/search/title/?genres=action&start=51&explore=title_type,genres
+2025-01-26 11:49:48,777 - movies.logging_config - INFO - Processing page: https://www.imdb.com/search/title/?genres=action&start=101&explore=title_type,genres
+2025-01-26 11:50:51,138 - movies.logging_config - INFO - Processing page: https://www.imdb.com/search/title/?genres=family&start=1&explore=title_type,genres
+2025-01-26 11:50:54,118 - movies.logging_config - INFO - Processing page: https://www.imdb.com/search/title/?genres=family&start=51&explore=title_type,genres
+2025-01-26 11:50:55,665 - movies.logging_config - INFO - Processing page: https://www.imdb.com/search/title/?genres=family&start=101&explore=title_type,genres
+2025-01-26 11:54:57,202 - django.utils.autoreload - INFO - /Users/mitchellzelthy/Desktop/Learn/Scraper/backend/movies/views.py changed, reloading.
+2025-01-26 11:55:12,074 - django.utils.autoreload - INFO - /Users/mitchellzelthy/Desktop/Learn/Scraper/backend/movies/views.py changed, reloading.
+2025-01-26 11:55:18,902 - movies.logging_config - INFO - Processing page: https://www.imdb.com/search/title/?genres=drama&start=1&explore=title_type,genres
+2025-01-26 11:55:23,054 - movies.logging_config - INFO - Processing page: https://www.imdb.com/search/title/?genres=drama&start=51&explore=title_type,genres
+2025-01-26 11:55:24,645 - movies.logging_config - INFO - Processing page: https://www.imdb.com/search/title/?genres=drama&start=101&explore=title_type,genres
+2025-01-26 11:55:26,147 - django.request - ERROR - Internal Server Error: /api/movies/
+Traceback (most recent call last):
+  File "/Users/mitchellzelthy/Desktop/Learn/Scraper/scraper/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/mitchellzelthy/Desktop/Learn/Scraper/scraper/lib/python3.13/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+  File "/Users/mitchellzelthy/Desktop/Learn/Scraper/scraper/lib/python3.13/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mitchellzelthy/Desktop/Learn/Scraper/scraper/lib/python3.13/site-packages/rest_framework/response.py", line 55, in rendered_content
+    assert renderer, ".accepted_renderer not set on Response"
+           ^^^^^^^^
+AssertionError: .accepted_renderer not set on Response
+2025-01-26 11:57:04,966 - django.utils.autoreload - INFO - /Users/mitchellzelthy/Desktop/Learn/Scraper/backend/movies/views.py changed, reloading.
+2025-01-26 11:57:39,231 - django.utils.autoreload - INFO - /Users/mitchellzelthy/Desktop/Learn/Scraper/backend/movies/views.py changed, reloading.
+2025-01-26 11:57:40,805 - django.utils.autoreload - INFO - /Users/mitchellzelthy/Desktop/Learn/Scraper/backend/movies/views.py changed, reloading.
+2025-01-26 11:58:25,125 - movies.logging_config - INFO - Processing page: https://www.imdb.com/search/title/?genres=comedy&start=1&explore=title_type,genres
+2025-01-26 11:58:29,361 - movies.logging_config - INFO - Processing page: https://www.imdb.com/search/title/?genres=comedy&start=51&explore=title_type,genres
+2025-01-26 11:58:30,387 - movies.logging_config - INFO - Processing page: https://www.imdb.com/search/title/?genres=comedy&start=101&explore=title_type,genres
+2025-01-26 11:59:30,295 - django.utils.autoreload - INFO - /Users/mitchellzelthy/Desktop/Learn/Scraper/backend/movies/views.py changed, reloading.
+2025-01-26 11:59:44,075 - django.utils.autoreload - INFO - /Users/mitchellzelthy/Desktop/Learn/Scraper/backend/movies/views.py changed, reloading.
+2025-01-26 11:59:47,792 - movies.logging_config - INFO - Processing page: https://www.imdb.com/search/title/?genres=comedy&start=1&explore=title_type,genres
+2025-01-26 12:00:22,461 - django.utils.autoreload - INFO - /Users/mitchellzelthy/Desktop/Learn/Scraper/backend/movies/views.py changed, reloading.
+2025-01-26 12:00:24,601 - movies.logging_config - INFO - Processing page: https://www.imdb.com/search/title/?genres=comedy&start=1&explore=title_type,genres
+2025-01-26 12:00:43,658 - django.utils.autoreload - INFO - /Users/mitchellzelthy/Desktop/Learn/Scraper/backend/movies/views.py changed, reloading.
+2025-01-26 12:01:13,838 - django.utils.autoreload - INFO - /Users/mitchellzelthy/Desktop/Learn/Scraper/backend/movies/views.py changed, reloading.
+2025-01-26 12:01:15,365 - django.utils.autoreload - INFO - /Users/mitchellzelthy/Desktop/Learn/Scraper/backend/movies/views.py changed, reloading.
+2025-01-26 12:01:18,360 - movies.logging_config - INFO - Processing page: https://www.imdb.com/search/title/?genres=comedy&start=1&explore=title_type,genres
+2025-01-26 12:01:20,080 - django.request - ERROR - Internal Server Error: /api/movies/
+Traceback (most recent call last):
+  File "/Users/mitchellzelthy/Desktop/Learn/Scraper/scraper/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/mitchellzelthy/Desktop/Learn/Scraper/scraper/lib/python3.13/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+  File "/Users/mitchellzelthy/Desktop/Learn/Scraper/scraper/lib/python3.13/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/mitchellzelthy/Desktop/Learn/Scraper/scraper/lib/python3.13/site-packages/rest_framework/response.py", line 55, in rendered_content
+    assert renderer, ".accepted_renderer not set on Response"
+           ^^^^^^^^
+AssertionError: .accepted_renderer not set on Response
+2025-01-26 12:02:12,175 - django.utils.autoreload - INFO - /Users/mitchellzelthy/Desktop/Learn/Scraper/backend/movies/views.py changed, reloading.
+2025-01-26 12:03:41,850 - django.utils.autoreload - INFO - /Users/mitchellzelthy/Desktop/Learn/Scraper/backend/movies/views.py changed, reloading.
+2025-01-26 12:03:43,364 - django.utils.autoreload - INFO - /Users/mitchellzelthy/Desktop/Learn/Scraper/backend/movies/views.py changed, reloading.
+2025-01-26 12:03:49,981 - movies.logging_config - INFO - Processing page: https://www.imdb.com/search/title/?genres=horror&start=1&explore=title_type,genres
+2025-01-26 12:03:53,187 - movies.logging_config - INFO - Processing page: https://www.imdb.com/search/title/?genres=horror&start=51&explore=title_type,genres
+2025-01-26 12:03:54,457 - movies.logging_config - INFO - Processing page: https://www.imdb.com/search/title/?genres=horror&start=101&explore=title_type,genres
+2025-01-26 12:05:10,240 - django.utils.autoreload - INFO - /Users/mitchellzelthy/Desktop/Learn/Scraper/backend/movies/views.py changed, reloading.
+2025-01-26 12:05:15,833 - django.utils.autoreload - INFO - /Users/mitchellzelthy/Desktop/Learn/Scraper/backend/movies/views.py changed, reloading.
+2025-01-26 12:05:18,706 - movies.logging_config - INFO - Processing page: https://www.imdb.com/search/title/?genres=horror&start=1&explore=title_type,genres
+2025-01-26 12:05:20,439 - movies.logging_config - INFO - Processing page: https://www.imdb.com/search/title/?genres=horror&start=51&explore=title_type,genres
+2025-01-26 12:05:21,407 - movies.logging_config - INFO - Processing page: https://www.imdb.com/search/title/?genres=horror&start=101&explore=title_type,genres
+2025-01-26 12:05:46,143 - django.utils.autoreload - INFO - /Users/mitchellzelthy/Desktop/Learn/Scraper/backend/movies/views.py changed, reloading.
+2025-01-26 12:06:52,414 - django.utils.autoreload - INFO - /Users/mitchellzelthy/Desktop/Learn/Scraper/backend/movies/views.py changed, reloading.
+2025-01-26 12:06:58,020 - django.utils.autoreload - INFO - /Users/mitchellzelthy/Desktop/Learn/Scraper/backend/movies/views.py changed, reloading.
+2025-01-26 12:08:44,627 - movies.logging_config - INFO - Processing page: https://www.imdb.com/search/title/?genres=action&start=1&explore=title_type,genres
+2025-01-26 12:08:47,689 - movies.logging_config - INFO - Processing page: https://www.imdb.com/search/title/?genres=action&start=51&explore=title_type,genres
+2025-01-26 12:08:49,489 - movies.logging_config - INFO - Processing page: https://www.imdb.com/search/title/?genres=action&start=101&explore=title_type,genres
+2025-01-26 12:09:20,192 - django.utils.autoreload - INFO - /Users/mitchellzelthy/Desktop/Learn/Scraper/backend/movies/views.py changed, reloading.
+2025-01-26 12:09:21,881 - movies.logging_config - INFO - Processing page: https://www.imdb.com/search/title/?genres=action&start=1&explore=title_type,genres
+2025-01-26 12:09:23,544 - movies.logging_config - INFO - Processing page: https://www.imdb.com/search/title/?genres=action&start=51&explore=title_type,genres
+2025-01-26 12:09:25,346 - movies.logging_config - INFO - Processing page: https://www.imdb.com/search/title/?genres=action&start=101&explore=title_type,genres
+2025-01-26 12:09:37,199 - django.utils.autoreload - INFO - /Users/mitchellzelthy/Desktop/Learn/Scraper/backend/movies/views.py changed, reloading.
+2025-01-26 12:09:38,739 - movies.logging_config - INFO - Processing page: https://www.imdb.com/search/title/?genres=action&start=1&explore=title_type,genres
+2025-01-26 12:09:40,426 - movies.logging_config - INFO - Processing page: https://www.imdb.com/search/title/?genres=action&start=51&explore=title_type,genres
+2025-01-26 12:09:42,069 - movies.logging_config - INFO - Processing page: https://www.imdb.com/search/title/?genres=action&start=101&explore=title_type,genres
+2025-01-26 12:10:16,002 - django.utils.autoreload - INFO - /Users/mitchellzelthy/Desktop/Learn/Scraper/backend/movies/imdb_scraper.py changed, reloading.
+2025-01-26 12:10:21,570 - django.utils.autoreload - INFO - /Users/mitchellzelthy/Desktop/Learn/Scraper/backend/movies/imdb_scraper.py changed, reloading.
+2025-01-26 12:10:24,671 - movies.logging_config - INFO - Processing page: https://www.imdb.com/search/title/?genres=action&start=1&explore=title_type,genres
+2025-01-26 12:10:26,105 - movies.logging_config - INFO - Processing page: https://www.imdb.com/search/title/?genres=action&start=51&explore=title_type,genres
+2025-01-26 12:10:27,768 - movies.logging_config - INFO - Processing page: https://www.imdb.com/search/title/?genres=action&start=101&explore=title_type,genres
+2025-01-26 12:10:45,958 - movies.logging_config - INFO - Processing page: https://www.imdb.com/search/title/?genres=crime&start=1&explore=title_type,genres
+2025-01-26 12:10:49,187 - movies.logging_config - INFO - Processing page: https://www.imdb.com/search/title/?genres=crime&start=51&explore=title_type,genres
+2025-01-26 12:10:50,886 - movies.logging_config - INFO - Processing page: https://www.imdb.com/search/title/?genres=crime&start=101&explore=title_type,genres
+2025-01-26 12:16:21,771 - django.utils.autoreload - INFO - /Users/mitchellzelthy/Desktop/Learn/Scraper/backend/movies/views.py changed, reloading.
+2025-01-26 12:16:36,497 - movies.logging_config - INFO - Processing page: https://www.imdb.com/search/title/?genres=horror&start=1&explore=title_type,genres
+2025-01-26 12:16:38,605 - movies.logging_config - INFO - Processing page: https://www.imdb.com/search/title/?genres=horror&start=51&explore=title_type,genres
+2025-01-26 12:16:40,111 - movies.logging_config - INFO - Processing page: https://www.imdb.com/search/title/?genres=horror&start=101&explore=title_type,genres
+2025-01-26 12:17:13,611 - movies.logging_config - INFO - Processing page: https://www.imdb.com/search/title/?genres=adventure&start=1&explore=title_type,genres
+2025-01-26 12:17:16,452 - movies.logging_config - INFO - Processing page: https://www.imdb.com/search/title/?genres=adventure&start=51&explore=title_type,genres
+2025-01-26 12:17:18,042 - movies.logging_config - INFO - Processing page: https://www.imdb.com/search/title/?genres=adventure&start=101&explore=title_type,genres
+2025-01-26 12:18:02,043 - movies.logging_config - INFO - Processing page: https://www.imdb.com/search/title/?genres=family&start=1&explore=title_type,genres
+2025-01-26 12:18:11,039 - movies.logging_config - INFO - Processing page: https://www.imdb.com/search/title/?genres=war&start=1&explore=title_type,genres
+2025-01-27 07:05:27,277 - movies.logging_config - INFO - Processing page: https://www.imdb.com/search/title/?genres=drama&start=1&explore=title_type,genres
+2025-01-27 07:05:31,199 - movies.logging_config - INFO - Processing page: https://www.imdb.com/search/title/?genres=drama&start=51&explore=title_type,genres
+2025-01-27 07:05:32,682 - movies.logging_config - INFO - Processing page: https://www.imdb.com/search/title/?genres=drama&start=101&explore=title_type,genres
+2025-01-27 07:05:38,767 - movies.logging_config - INFO - Processing page: https://www.imdb.com/search/title/?genres=drama&start=1&explore=title_type,genres
+2025-01-27 07:05:40,688 - movies.logging_config - INFO - Processing page: https://www.imdb.com/search/title/?genres=drama&start=51&explore=title_type,genres
+2025-01-27 07:05:42,302 - movies.logging_config - INFO - Processing page: https://www.imdb.com/search/title/?genres=drama&start=101&explore=title_type,genres
+2025-01-27 07:05:53,723 - movies.logging_config - INFO - Processing page: https://www.imdb.com/search/title/?genres=crime&start=1&explore=title_type,genres
+2025-01-27 07:05:56,681 - movies.logging_config - INFO - Processing page: https://www.imdb.com/search/title/?genres=crime&start=51&explore=title_type,genres
+2025-01-27 07:05:58,208 - movies.logging_config - INFO - Processing page: https://www.imdb.com/search/title/?genres=crime&start=101&explore=title_type,genres
+2025-01-27 19:50:03,582 - django.utils.autoreload - INFO - /Users/mitchellzelthy/Desktop/Learn/Scraper/backend/movies/models.py changed, reloading.
+2025-01-27 19:50:44,387 - django.utils.autoreload - INFO - /Users/mitchellzelthy/Desktop/Learn/Scraper/backend/movies/views.py changed, reloading.
+2025-01-27 19:50:55,301 - django.utils.autoreload - INFO - /Users/mitchellzelthy/Desktop/Learn/Scraper/backend/movies/views.py changed, reloading.
+2025-01-27 19:50:56,813 - django.utils.autoreload - INFO - /Users/mitchellzelthy/Desktop/Learn/Scraper/backend/movies/views.py changed, reloading.
+2025-01-27 19:51:15,502 - movies.logging_config - INFO - Processing page: https://www.imdb.com/search/title/?genres=action&start=1&explore=title_type,genres
+2025-01-27 19:51:19,488 - movies.logging_config - INFO - Processing page: https://www.imdb.com/search/title/?genres=action&start=51&explore=title_type,genres
+2025-01-27 19:51:20,402 - movies.logging_config - INFO - Processing page: https://www.imdb.com/search/title/?genres=action&start=101&explore=title_type,genres
+2025-01-27 19:52:48,378 - movies.logging_config - INFO - Processing page: https://www.imdb.com/search/title/?genres=crime&start=1&explore=title_type,genres
+2025-01-27 19:53:57,968 - django.utils.autoreload - INFO - /Users/mitchellzelthy/Desktop/Learn/Scraper/backend/movies/views.py changed, reloading.
+2025-01-27 19:54:46,633 - django.utils.autoreload - INFO - /Users/mitchellzelthy/Desktop/Learn/Scraper/backend/movies/views.py changed, reloading.
+2025-01-27 19:54:49,505 - movies.logging_config - INFO - Processing page: https://www.imdb.com/search/title/?genres=crime&start=1&explore=title_type,genres
+2025-01-27 19:55:13,867 - django.utils.autoreload - INFO - /Users/mitchellzelthy/Desktop/Learn/Scraper/backend/movies/views.py changed, reloading.
+2025-01-27 19:59:37,569 - movies.logging_config - INFO - Processing page: https://www.imdb.com/search/title/?genres=action&start=1&explore=title_type,genres
+2025-01-27 19:59:39,601 - movies.logging_config - INFO - Processing page: https://www.imdb.com/search/title/?genres=action&start=51&explore=title_type,genres
+2025-01-27 19:59:40,616 - movies.logging_config - INFO - Processing page: https://www.imdb.com/search/title/?genres=action&start=101&explore=title_type,genres
+2025-01-27 19:59:42,068 - movies.logging_config - INFO - Processing page: https://www.imdb.com/search/title/?genres=action&start=1&explore=title_type,genres
+2025-01-27 20:03:33,057 - django.utils.autoreload - INFO - /Users/mitchellzelthy/Desktop/Learn/Scraper/backend/movies/views.py changed, reloading.
+2025-01-27 20:03:53,337 - movies.logging_config - INFO - Processing page: https://www.imdb.com/search/title/?genres=crime&start=1&explore=title_type,genres
+2025-01-27 20:03:55,885 - movies.logging_config - INFO - Processing page: https://www.imdb.com/search/title/?genres=crime&start=51&explore=title_type,genres
+2025-01-27 20:03:57,307 - movies.logging_config - INFO - Processing page: https://www.imdb.com/search/title/?genres=crime&start=101&explore=title_type,genres
