@@ -5,29 +5,49 @@
     <h1 class="text-3xl font-bold mb-6">IMDb Movie Scraper</h1>
     
     <form id="scrape-form" class="mb-6">
-        <div class="flex space-x-4">
-            <input 
-                type="text" 
-                name="genre" 
-                placeholder="Enter Genre" 
-                class="border p-2 flex-grow"
-                required
-            >
-            <input 
-                type="number" 
-                name="max_pages" 
-                placeholder="Max Pages" 
-                min="1" 
-                max="10" 
-                value="3" 
-                class="border p-2 w-32"
-            >
-            <button 
-                type="submit" 
-                class="bg-blue-500 text-white p-2 rounded hover:bg-blue-600"
-            >
-                Scrape Movies
-            </button>
+        <div class="flex flex-col space-y-4">
+            <div class="flex space-x-4">
+                <div class="flex-grow">
+                    <input 
+                        type="text" 
+                        name="genre" 
+                        id="genre-input"
+                        placeholder="Enter Genre" 
+                        class="border p-2 w-full"
+                        required
+                        list="genre-list"
+                    >
+                    <datalist id="genre-list">
+                        {% for genre in genres %}
+                            <option value="{{ genre|title }}">
+                        {% endfor %}
+                    </datalist>
+                </div>
+                <button 
+                    type="button" 
+                    id="random-genre"
+                    class="bg-purple-500 text-white p-2 rounded hover:bg-purple-600 min-w-[120px]"
+                >
+                    Random Genre
+                </button>
+            </div>
+            <div class="flex space-x-4">
+                <input 
+                    type="number" 
+                    name="max_pages" 
+                    placeholder="Max Pages" 
+                    min="1" 
+                    max="10" 
+                    value="3" 
+                    class="border p-2 w-32"
+                >
+                <button 
+                    type="submit" 
+                    class="bg-blue-500 text-white p-2 rounded hover:bg-blue-600 flex-grow"
+                >
+                    Scrape Movies
+                </button>
+            </div>
         </div>
     </form>
 
@@ -64,6 +84,25 @@ async function fetchMovies(genre, page = 1) {
     }
     return response.json();
 }
+
+async function getRandomGenre() {
+    const response = await fetch('/api/movies/random-genre/');
+    if (!response.ok) {
+        throw new Error('Failed to get random genre');
+    }
+    const data = await response.json();
+    return data.genre;
+}
+
+document.getElementById('random-genre').addEventListener('click', async () => {
+    try {
+        const genre = await getRandomGenre();
+        document.getElementById('genre-input').value = genre;
+    } catch (error) {
+        document.getElementById('error').textContent = error.message;
+        document.getElementById('error').classList.remove('hidden');
+    }
+});
 
 function updatePaginationUI() {
     const paginationEl = document.getElementById('pagination');
@@ -105,6 +144,7 @@ function renderMovies(movies) {
     });
 }
 
+// Previous page handler
 document.getElementById('prev-page').addEventListener('click', async () => {
     if (currentPage > 1) {
         currentPage--;
@@ -119,6 +159,7 @@ document.getElementById('prev-page').addEventListener('click', async () => {
     }
 });
 
+// Next page handler
 document.getElementById('next-page').addEventListener('click', async () => {
     if (currentPage < totalPages) {
         currentPage++;
@@ -133,10 +174,11 @@ document.getElementById('next-page').addEventListener('click', async () => {
     }
 });
 
+// Form submit handler
 document.getElementById('scrape-form').addEventListener('submit', async function(e) {
     e.preventDefault();
     const form = e.target;
-    const genre = form.genre.value;
+    const genre = form.genre.value.toLowerCase();
     const maxPages = form.max_pages.value;
     currentGenre = genre;
     currentPage = 1;

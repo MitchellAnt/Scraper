@@ -6,6 +6,14 @@ from rest_framework.pagination import PageNumberPagination
 from .models import Movie
 from .imdb_scraper import scrape_movies_by_genre
 from django.utils import timezone
+import random
+
+# List of popular movie genres
+POPULAR_GENRES = [
+    'action', 'comedy', 'drama', 'horror', 'thriller', 
+    'romance', 'sci-fi', 'adventure', 'animation', 'fantasy',
+    'crime', 'mystery', 'documentary', 'family', 'western'
+]
 
 class MoviePagination(PageNumberPagination):
     page_size = 10
@@ -13,7 +21,17 @@ class MoviePagination(PageNumberPagination):
     max_page_size = 50
 
 def movie_scraper_view(request):
-    return render(request, 'movies/scraper.html')
+    return render(request, 'movies/scraper.html', {
+        'genres': POPULAR_GENRES
+    })
+
+@api_view(['GET'])
+def random_genre(request):
+    genre = random.choice(POPULAR_GENRES)
+    return Response({
+        'status': 'success',
+        'genre': genre
+    })
 
 @api_view(['POST'])
 def scrape_movies(request):
@@ -84,5 +102,6 @@ def movie_list_view(request):
         'count': movies.count(),
         'results': movie_data,
         'current_page': request.GET.get('page', 1),
-        'total_pages': (movies.count() + paginator.page_size - 1) // paginator.page_size
+        'total_pages': (movies.count() + paginator.page_size - 1) // paginator.page_size,
+        'genre': genre
     })
